@@ -5,37 +5,34 @@ import java.util.Scanner;
 public class TennisPlayer {
 	
 	//nome do jogador
-	private String nameTennisPlayer;
+	private String name;
 	
-	//numero de tirulos do jogador
-	private int titleTennisPlayer;
+	//numero de titulos do jogador
+	private int numberTitle;
 	
 	//nacionalidade do jogador
-	private String nacionalityTennisPlayer;
+	private String nacionality;
 	
-	//Caracteres para entrada
+	//Variavel para entrada de dados inteiros
 	private Scanner scanDataInteger = new Scanner(System.in);
+
+	//Variavel para entrada de dados String
 	private Scanner scanDataString = new Scanner(System.in);
 	
-	//flag para terminar o programa
-	private String endProgram;
-	
-	//construtor da classe
-	public TennisPlayer(){
-		endProgram = "n";
-	}
-	
 	//Cadastro do jogador
-	public void fillDataTennisPlayer(){
-		
-		//iniciando processo de cadastro
-		System.out.println("DESEJA CADASTRAR JOGADOR AGORA?");
-		endProgram = scanDataInteger.next();
+	public void fillData(){
 		
 		//Cadastro das informacoes do jogador
 		System.out.println("NOME: ");
-		nameTennisPlayer = scanDataString.next();
+		name = scanDataString.next();
 		System.out.println("TITULOS: ");
+		numberTitle = scanDataInteger.nextInt();
 		System.out.println("NACIONALIDADE: ");
+		nacionality = scanDataString.next();
+	}
+	
+	//Metodo para exibir infoemacoes do jogador
+	public void showInformation(){
+		System.out.println("NOME: " + this.name + " TITULOS: " + this.numberTitle + " NACIONALIDADE: " + this.nacionality);
 	}
 }

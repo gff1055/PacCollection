@@ -1,6 +1,9 @@
+import packageTennisPlayer.TennisPlayer;
 
 public class MainClass {
 	public static void main(String[] args){
-		System.out.println("TESTE");
+		TennisPlayer objTennisPlayer = new TennisPlayer();
+		objTennisPlayer.fillData();
+		objTennisPlayer.showInformation();
 	}
 }
