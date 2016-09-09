@@ -5,24 +5,23 @@ import java.util.List;
 
 import packageTennisPlayer.TennisPlayer;
 
-public class Ranking implements Comparable {
+public class Ranking {
 	private List<TennisPlayer> listPlayers = new ArrayList<>();
 	
 	//metodo para cadastrar jogadores
-	void registerTennisPlayer(){
-		
+	public void registerTennisPlayer(TennisPlayer paramTennisPlayer){
+		listPlayers.add(paramTennisPlayer);
 	}
 	
 	//metodo para mostrar todos os jogadores
-	void showAllTennisPlayer(){
-		
+	public void showAllTennisPlayer(){
+		System.out.println("DADOS SOBRE O RANKING");
+		for(int i=0; i<listPlayers.size(); i++){
+			listPlayers.get(i).showInformation();
+		}
 	}
 	
-	public int compareTo(TennisPlayer paramTennisPlayer){
-		
-		return 0;
-		
-	}
+	
 
 	
 }

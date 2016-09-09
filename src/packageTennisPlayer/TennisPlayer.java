@@ -2,7 +2,7 @@ package packageTennisPlayer;
 
 import java.util.Scanner;
 
-public class TennisPlayer {
+public class TennisPlayer implements Comparable<TennisPlayer> {
 	
 	//nome do jogador
 	private String name;
@@ -34,5 +34,10 @@ public class TennisPlayer {
 	//Metodo para exibir infoemacoes do jogador
 	public void showInformation(){
 		System.out.println("NOME: " + this.name + " TITULOS: " + this.numberTitle + " NACIONALIDADE: " + this.nacionality);
+	}
+	
+	//Metodo para comparar
+	public int compareTo(TennisPlayer paramTennisPlayer){
+		return 0;
 	}
 }
