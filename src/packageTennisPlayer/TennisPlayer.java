@@ -15,7 +15,6 @@ public class TennisPlayer implements Comparable<TennisPlayer> {
 	
 	//Variavel para entrada de dados inteiros
 	private Scanner scanDataInteger = new Scanner(System.in);
-
 	//Variavel para entrada de dados String
 	private Scanner scanDataString = new Scanner(System.in);
 	
