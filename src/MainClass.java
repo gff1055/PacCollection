@@ -1,7 +1,9 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import exceptions.TypeException;
 import packageRanking.Ranking;
+import packageRanking.SetRanking;
 import packageTennisPlayer.TennisPlayer;
 
 public class MainClass {
@@ -16,6 +18,8 @@ public class MainClass {
 		//armazena dados do ranking
 		Ranking listRanking = new Ranking();
 		
+		SetRanking listSetRanking = new SetRanking();
+		
 		System.out.println("DESEJA INSERIR DADOS DO JOGADOR (s/n)?");
 		strEndProgram = scaEndProgram.next();
 		
@@ -27,9 +31,11 @@ public class MainClass {
 				
 				//preenche dados
 				objTennisPlayer.fillData();
+				
 			
 				//adiciona o jogador na lista
-				if(listRanking.registerTennisPlayer(objTennisPlayer))
+				if(listRanking.registerTennisPlayer(objTennisPlayer) &&
+						listSetRanking.registerTennisPlayer(objTennisPlayer))
 					System.out.println("JOGADOR CADASTRADO");
 				
 				else
@@ -43,8 +49,17 @@ public class MainClass {
 			strEndProgram = scaEndProgram.next();
 		}
 		
-		
 		//mostra os dados do ranking
+		System.out.println("DADOS SOBRE O RANKING");
 		listRanking.showAllTennisPlayer();
+		listSetRanking.showAllTennisPlayer();
+		
+		listRanking.orderTennisPlayer();
+		
+		listRanking.maxNumberTitle();
+		
+		listRanking.minNumberTitle();
+		
+		
 	}
 }
