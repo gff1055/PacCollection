@@ -55,7 +55,7 @@ public class MainClass {
 		listSetRanking.showAllTennisPlayer();
 		
 		listRanking.orderTennisPlayer();
-		
+
 		listRanking.maxNumberTitle();
 		
 		listRanking.minNumberTitle();

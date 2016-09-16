@@ -19,6 +19,8 @@ private Set<TennisPlayer> listPlayers = new HashSet<>();
 	
 	//metodo para mostrar todos os jogadores
 	public void showAllTennisPlayer(){
-		System.out.println(listPlayers);
+		for(TennisPlayer ind: listPlayers){
+			ind.showInformation();
+		}
 	}
 }
